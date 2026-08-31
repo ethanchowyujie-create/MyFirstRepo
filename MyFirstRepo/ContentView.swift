@@ -18,6 +18,7 @@ struct ContentView: View {
         .padding()
     }
 }
+helloWorld("print")
 
 #Preview {
     ContentView()
