@@ -8,17 +8,34 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var cookieButton = 0
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("HI wsp")
+        NavigationStack{
+            VStack() {
+                Text("\(cookieButton) cookies")
+                Button() {
+                    cookieButton += 1
+                }label:{
+                    Image("cookie")
+                }
+            }
+            .toolbar {
+                ToolbarItem(placement: .principal) {
+                    Text("Cookie clicker")
+                        .font(.title)
+                        .fontWeight(.bold)
+                }
+            }
+            .toolbar {
+                NavigationLink{
+                    RandomView(cookieButton:$cookieButton)
+                }label:{
+                    Text("Click me")
+                }
+            }
         }
-        .padding()
     }
 }
-helloWorld("print")
 
 #Preview {
     ContentView()
