@@ -9,12 +9,15 @@ import SwiftUI
 
 struct TabberView: View {
     var body: some View {
-        NavigationStack{
-            TabView {
-                Tab("Clicker", systemImage: "button.programmable"){
+        TabView {
+            Tab("Clicker", systemImage: "button.programmable") {
+                NavigationStack {
                     ContentView()
                 }
-                Tab("Shop", systemImage: "list.bullet"){
+            }
+            
+            Tab("Shop", systemImage: "list.bullet") {
+                NavigationStack {
                     HomeView()
                 }
             }

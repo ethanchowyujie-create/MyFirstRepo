@@ -9,12 +9,18 @@ import SwiftUI
 
 struct RandomView: View {
     @Binding var cookieButton: Int
-    
     var body: some View {
         VStack{
-            Text("Click cookie to 200 and get a surprise")
             if cookieButton >= 200 {
-                Image("touchGrass")
+                VStack{
+                    Text("Touch grass")
+                    Button(){
+                    }label:{
+                        Image("touchGrass")
+                    }
+                }
+            }else{
+                Text("Click cookie to 200 and get a surprise")
             }
         }
         .padding(10)
