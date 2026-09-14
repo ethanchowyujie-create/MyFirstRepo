@@ -14,7 +14,7 @@ struct TabberView: View {
                 Tab("Clicker", systemImage: "button.programmable"){
                     ContentView()
                 }
-                Tab("Shop", systemImage: "menu"){
+                Tab("Shop", systemImage: "list.bullet"){
                     HomeView()
                 }
             }
